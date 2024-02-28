@@ -1,0 +1,133 @@
+.app-heroBanner {
+    margin: 1em;
+}
+ul[role=appList] {
+    padding-left: 0;
+    list-style: none;
+    /* font-size: clamp(2.74rem, 2.5vw, 8.38rem); */
+}
+
+ul[role=appList] li {
+    display: inline-block;
+    font-size: 2.74rem;
+}
+
+@media(min-width: 1025px){
+    ul[role=appList] li {
+        font-size: 8.38rem;
+    }
+}
+
+ul[role=appList] a[role=link] {
+    color: black;
+}
+
+ul[role=appList] a[role=link]:hover {
+    color: rgba(98, 60, 234);
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: rgba(98, 60, 234);
+}
+
+
+@media(min-width: 1025px){
+    ul[role=appList] a[role=link]:hover {
+        text-decoration-thickness: 10px;
+    }
+}
+
+.app-row.pt4.pb4 {
+    padding: 0.4em 0.5em;
+    white-space: nowrap;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color:  rgb(207,255,4);
+}
+
+.app-row.m5 {
+    margin: 0.5em 0;
+}
+
+.app-row h2 {
+    margin-left: 0.5em;
+    font-size: 1.758rem;
+    font-weight: 400;
+}
+
+.arrival-list {
+    overflow-x: scroll;
+    display: flex;
+    scrollbar-width:auto;
+
+}
+
+.arrival-item {
+    flex-shrink: 0;
+    width: 80vw;
+    height: 700px;
+    border: 1px solid black;
+    border-collapse:collapse;
+    display: flex;
+    flex-direction: column;
+}
+
+.arrival-item__image {
+    flex: 1;
+    flex-basis: 200px;
+}
+
+@media(min-width: 1025px){
+    .arrival-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .arrival-item {
+        width: 100%;
+        height: unset;
+    }
+    .app-row h2 {
+        font-size: 4.29rem;
+        
+    }
+}
+
+
+.arrival-item__text {
+    border-top: 1px solid black;
+    padding: 1em 0.5em;
+}
+
+.arrival-item__text .flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-row.mi-5 {
+    padding: 1em 0.8em;
+   
+}
+
+.app-row.mi-5 p {
+    line-height: 33.7667px;
+    font-size: 1.758rem;
+}
+
+@media(min-width: 1025px) {
+    .app-row.mi-5 p {
+        line-height: 77.2333px;
+        font-size: 5.364rem;
+    }
+}
+
+.filterList {
+    border: 1px solid black;
+    text-align: end;
+}
+
+.temp-row {
+    height: 50vh;
+    display: grid;
+    place-items: center;
+    font-size: 5em;
+}
