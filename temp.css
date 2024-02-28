@@ -1,0 +1,109 @@
+.app-row.m5 {
+    margin: 0.5em 0;
+    border-bottom: 2px solid black;
+    border-collapse: collapse;
+
+}
+
+.app-row.m5 h2 {
+  margin-left: 0.5em;
+}
+.filterList {
+    
+    display: flex;
+    overflow-y: hidden;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border-bottom: 1px solid black;
+
+
+}
+
+.temptab {
+    flex: 1;
+}
+
+.tabOffset{
+    position: absolute;
+    top: 0;
+    right: 1em;
+   
+}
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  .tab__content {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+  }
+
+.tab input:checked ~ .tab__content {
+    height: 15rem;
+
+
+  }
+  .tab__label {
+    display: flex;
+    color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+    gap: 1em;
+    align-items: center;
+   
+    padding: 1rem 0;
+    font-weight: 600;
+    font-size: 14px;
+   
+  }
+
+  .tab__label:hover {
+    color: rgba(98, 60, 234);
+  }
+  .tab__label::after {
+    display: block;
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    margin-bottom: 0.4em;
+    transform: rotate(90deg);
+
+  }
+  .tab input:checked + .tab__label::after {
+    transform: rotate(-90deg);
+    transition: all 0.3s ease;
+  }
+
+  .tab__content {
+    font-size: 15px;
+  }
+
+  .tab__content ul {
+      padding-top: 10px;
+      padding-left: 15px;
+      padding-right: 40px;
+  }
+ 
+
+  @media(min-width: 768px){
+    .filterList {
+      display: none;
+    }
+  }
+
+
+.tab__content ul a[role=link] {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.5em;
+}
+
+.tab__content ul a[role=link]:hover {
+  color: rgba(98, 60, 234);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+ 
+}
